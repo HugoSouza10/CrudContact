@@ -14,7 +14,6 @@ export const CardContact = ({ id, nome, email, telefone }:ContactType) => {
   const [contentType, setContentType] = React.useState<'edit' | 'ver' | 'add'>();
 
 
-
   const handleOpenModal = (type: 'edit' | 'ver' | 'add') => {
     setContentType(type);
     setIsModalOpen(true);
@@ -61,7 +60,6 @@ export const CardContact = ({ id, nome, email, telefone }:ContactType) => {
                 </C.ButtonAction>
             </C.ContainerAction>
 
-
             {/* Este é um comentário em JSX 
             {contentType === 'edit' ? (
               <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
@@ -91,9 +89,6 @@ export const CardContact = ({ id, nome, email, telefone }:ContactType) => {
               <h2>Adicionar conteúdo</h2>
             </Modal>
           ) : null}
-
-
-        
         </C.Container>
     )
 }

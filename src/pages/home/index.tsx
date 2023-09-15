@@ -9,9 +9,19 @@ import { ContactType } from '../../types';
 
 
 export const Home = () => {
-    //const {data} = useContactContext();
     const [contacts, setContacts] = useState<ContactType[]>([]);
-  
+
+    // Termos pelos quais você deseja filtrar
+      const termoBusca = '';
+
+      // Função para filtrar os contatos por nome, email e id
+      const contatosFiltrados = contacts.filter(contato => {
+        return (
+          contato.nome.toLowerCase().includes(termoBusca.toLowerCase()) ||
+          contato.email.toLowerCase().includes(termoBusca.toLowerCase()) ||
+          contato.id.toString() === termoBusca
+        );
+      });
 
     /*Listando dados */
     useEffect(() => {
@@ -37,20 +47,29 @@ export const Home = () => {
                 <p>jnsnsjdjnsjdnsjndjnsdjnsjndsd bfbhdbfdbfdb sjnssndn ksnknskd</p>
                 <Search/>
                 <C.ContainerCard>
-                    {contacts.map(contact => (
+                    {termoBusca
+                    ? contatosFiltrados.map(contact => (
                         <CardContact
-                        id={contact.id}
-                        nome={contact.nome}
-                        email={contact.email}
-                        telefone={contact.telefone}
-                        foto={contact.foto}
-                    />
-                ))}
+                          key={contact.id}
+                          id={contact.id}
+                          nome={contact.nome}
+                          email={contact.email}
+                          telefone={contact.telefone}
+                          foto={contact.foto}
+                        />
+                      ))
+                    : contacts.map(contact => (
+                        <CardContact
+                          key={contact.id}
+                          id={contact.id}
+                          nome={contact.nome}
+                          email={contact.email}
+                          telefone={contact.telefone}
+                          foto={contact.foto}
+                        />
+                      ))}
             </C.ContainerCard>
-            </C.Container>
-            
+        </C.Container>
         </>
-        
-       
     )
 }
