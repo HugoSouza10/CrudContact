@@ -17,13 +17,14 @@ export const ContainerNew = styled.div`
     }
 
     .btn-new {
+        
         padding: 5px;
-        background-color: green;
+        background-color: #0767c6;
+        color: #fff;
         border-radius: 3px;
     }
 
     .btn-icone {
-       background-color: rebeccapurple;
        margin-right: 3px;
     }
 `;

@@ -14,11 +14,6 @@ export const Container = styled.div`
 `;
 
 
-export const ModalBody = styled.div`
-    
-`;
-
-
 export const HeaderModal  = styled.header`
         border-bottom: 1px solid #25CD89;
         padding: 10px;
@@ -28,4 +23,25 @@ export const HeaderModal  = styled.header`
             margin: 0;
         }
 
+`;
+
+/*estilização modal */
+
+export const ModalOverlay = styled.div<{ isOpen: boolean }>`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: ${(props) => (props.isOpen ? 'flex' : 'none')};
+  justify-content: center;
+  align-items: center;
+`;
+
+export  const ModalContent = styled.div`
+  width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
 `;

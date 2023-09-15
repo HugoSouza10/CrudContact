@@ -4,18 +4,13 @@ import { createContext, useState, ReactNode, useContext, useReducer } from "reac
 //Types
 
 type State = {
-    loading:boolean;
-    nameSearch: string; 
+    loading:boolean; 
 }
 
 type Data = {
-    avatar_url:string,
-    bio: string,
-    followers: number,
-    following: number,
-    location: string,
     name: string,
-    id:number,
+    phone: string,
+    email: string
 }
 
 
@@ -45,27 +40,21 @@ const UseContactContext = createContext<ContextType | undefined >(undefined);
 
 //DADOS INITICIAIS REQUISIÇÃO
 const initialResponse: Data = {
-    avatar_url:'',
-    bio: '',
-    followers: 0,
-    following: 0,
-    location: '',
     name: '',
-    id: 0,
+    phone: '',
+    email: ''
 }
 
 //Dados ininiciais do state
 
 const initialData: State = {
-    loading: false,
-    nameSearch: '',
+    loading: false
 }
 
 
 //Reducer
 
 export enum UserContactAction {
-    setNameSearch,
     setLoading,
 }
 
@@ -73,9 +62,6 @@ export enum UserContactAction {
 
 const useGitReducer = (state:State, action:Action) => {
     switch(action.type) {
-
-        case UserContactAction.setNameSearch:
-            return {...state, nameSearch: action.payload}; 
             
         case UserContactAction.setLoading:
             return {...state, loading: action.payload}; 
@@ -105,7 +91,7 @@ export const UseContactProvider  = ({children}:UseContactProviderProps) => {
             get: async () => {
               try {
                 updateLoadding(true);
-                const response = await fetch(`${API_BASE}/users/${state.nameSearch}`);
+                const response = await fetch(`${API_BASE}/users/HugoSouza10`);
           
                 if (!response.ok) {
                   throw new Error('Erro ao buscar usuário');

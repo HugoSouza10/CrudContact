@@ -1,18 +1,28 @@
-import * as C from './style';
 
-type Props = {
-    isOpen: boolean
+import * as C from '../Modal/style';
+
+type ModalProps = {
+  isOpen: boolean;
+  onClose: () => void;
+  children: React.ReactNode;
 }
 
-export const Modal = ({isOpen}:Props) => {
-    return(
-        <C.Container>
-            <C.HeaderModal>
-                 <h2>Obrigado por se cadastrar, confira seus dados</h2>
-            </C.HeaderModal>
-            <C.ModalBody>
-                Info.....
-            </C.ModalBody>
-        </C.Container>
-    )
-}
+
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
+  const handleOverlayClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (event.target === event.currentTarget) {
+      onClose();
+    }
+  };
+
+  return (
+    <C.ModalOverlay isOpen={isOpen} onClick={handleOverlayClick}>
+      <C.ModalContent>
+        <button onClick={onClose}>Fechar</button>
+        {children}
+      </C.ModalContent>
+    </C.ModalOverlay>
+  );
+};
+
+export default Modal;

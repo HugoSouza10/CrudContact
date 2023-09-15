@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Header = styled.header`
    font-family: Arial, Helvetica, sans-serif;
-   background-color: #000;
+   background-color: #e7e7e7;
    padding: 20px 0;
-   color: #fff;
+   color: #000;
    
 `;
 
