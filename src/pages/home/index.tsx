@@ -7,12 +7,16 @@ import { api } from '../../api';
 import React, { useEffect, useState } from 'react';
 import { ContactType } from '../../types';
 
-
 export const Home = () => {
-    const [contacts, setContacts] = useState<ContactType[]>([]);
 
-    // Termos pelos quais você deseja filtrar
-      const termoBusca = '';
+    const [contacts, setContacts] = useState<ContactType[]>([]);
+    const [termoBusca, settermoBusca] = useState<String>(String);
+
+    const captureWord = (word:string) => {
+      // Lógica da função aqui
+      console.log(word);
+      settermoBusca(word)
+    };
 
       // Função para filtrar os contatos por nome, email e id
       const contatosFiltrados = contacts.filter(contato => {
@@ -45,7 +49,7 @@ export const Home = () => {
                     <div  className='btn-new'><span className='btn-icone'>➕</span>New</div>
                 </C.ContainerNew>
                 <p>jnsnsjdjnsjdnsjndjnsdjnsjndsd bfbhdbfdbfdb sjnssndn ksnknskd</p>
-                <Search/>
+                <Search captureWord={captureWord}/>
                 <C.ContainerCard>
                     {termoBusca
                     ? contatosFiltrados.map(contact => (
