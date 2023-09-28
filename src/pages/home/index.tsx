@@ -1,7 +1,6 @@
 import { Header } from '../../components/Header';
 import { Search } from '../../components/Search';
 import { CardContact } from '../../components/CardContact';
-import { Add } from '../../components/Modal/Add';
 import * as C from './style';
 import { api } from '../../api';
 import React, { useEffect, useState } from 'react';
@@ -44,10 +43,7 @@ export const Home = () => {
         <>
             <Header/>
             <C.Container>
-                <C.ContainerNew>
-                    <h1>Phone Directory</h1>
-                    <div  className='btn-new'><span className='btn-icone'>➕</span>New</div>
-                </C.ContainerNew>
+                <h1>Phone Directory</h1>
                 <p>jnsnsjdjnsjdnsjndjnsdjnsjndsd bfbhdbfdbfdb sjnssndn ksnknskd</p>
                 <Search captureWord={captureWord}/>
                 <C.ContainerCard>

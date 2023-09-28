@@ -45,6 +45,26 @@
       "email": "julia@example.com",
       "telefone": "123455678",
       "foto": "https://thispersondoesnotexist.com/"
+    },
+    {
+      "id": 11,
+      "nome": "Gabriel",
+      "email": "gabriel@ideia2001.com",
+      "telefone": "8839493943",
+      "foto": "https://thispersondoesnotexist.com/"
+    },
+    {
+      "id": 12,
+      "nome": "Hugo",
+      "email": "hugo@ideia2001.com",
+      "telefone": "8839493943",
+      "foto": "https://thispersondoesnotexist.com/"
+    },
+    {
+      "nome": "Raimundo Machado",
+      "email": "raimundomachado@gmailc.om",
+      "telefone": "884949583485",
+      "id": 13
     }
   ]
 }

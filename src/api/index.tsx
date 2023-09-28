@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 type Props = {
-  id: number
+  id?: number
   nome: string
   email:string
   telefone: string
@@ -18,9 +18,13 @@ export const api =  {
         }
     },
 
-    adicionar: async () => {
+    adicionar: async (data:Props) => {
       try {
-        const response = await axios.get('http://localhost:3001/contatos');
+        const response = await axios.post('http://localhost:3001/contatos', {
+          nome: data.nome,
+          email: data.email,
+          telefone: data.telefone
+        });
         return response.data;
       } catch (error) {
         console.log('Erro ao adicionar contatos:', error);
@@ -45,6 +49,5 @@ export const api =  {
         } catch (error) {
           console.log('Erro ao editar contato:', error);
         }
-
     }
 }

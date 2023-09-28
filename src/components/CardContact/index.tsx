@@ -7,6 +7,7 @@ import React from 'react';
 import Modal from '../Modal';
 import {Ver} from '../Modal/Ver';
 import {Edit} from '../Modal/Edit';
+import {Add} from '../Modal/Add';
 
 
 export const CardContact = ({ id, nome, email, telefone }:ContactType) => {
@@ -58,6 +59,9 @@ export const CardContact = ({ id, nome, email, telefone }:ContactType) => {
                 <C.ButtonAction onClick={handleDelete} bg = "#ff0057">
                   Delete
                 </C.ButtonAction>
+                <C.ButtonAction onClick={()=>handleOpenModal("add")} bg = "#FFC107">
+                  Add
+                </C.ButtonAction>
             </C.ContainerAction>
 
             {/* Este é um comentário em JSX 
@@ -86,7 +90,7 @@ export const CardContact = ({ id, nome, email, telefone }:ContactType) => {
             </Modal>
           ) : contentType === 'add' ? (
             <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-              <h2>Adicionar conteúdo</h2>
+              <Add></Add>
             </Modal>
           ) : null}
         </C.Container>

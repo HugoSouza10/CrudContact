@@ -1,32 +1,29 @@
 import React, { useState } from 'react';
 import { api } from '../../../api';
-import { ContactType } from '../../../types';
-
 import * as C from './style';
 
 
-export const Add = ({id, nome, email, telefone}:ContactType) => {
-
-  const [FormData, setFormData] = useState({
-    id: id,
-    nome: nome,
-    email: email,
-    telefone: telefone,
+export const Add = () => {
+  const [formData, setFormData] = useState({
+    nome: '',
+    email: '',
+    telefone: '',
   });
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
-    setFormData((prevData) => ({
-      ...prevData,
+    console.log(name, value)
+    // Atualize o estado do formData com os novos valores
+    setFormData({
+      ...formData,
       [name]: value,
-    }));
+    });
   };
 
 
-  const handleUpdate = () => { 
-    api.editar(FormData);
+  const handleUpdate = () => {
+    api.adicionar(formData);
   }
-
 
   return (
     <C.FormContainer>
@@ -36,24 +33,24 @@ export const Add = ({id, nome, email, telefone}:ContactType) => {
           type="text"
           placeholder="Nome"
           name="nome"
-          value={FormData.nome}
           onChange={handleChange}
+          value={formData.nome}
         />
         <C.Input
           type="email"
           name="email"
           placeholder="Email"
           onChange={handleChange}
-          value={FormData.email}
+          value={formData.email}
         />
         <C.Input
           type="tel"
           name="telefone"
           placeholder="Telefone"
-          value={FormData.telefone}
           onChange={handleChange}
+          value={formData.telefone}
         />
-        <C.Button onClick={handleUpdate} type="submit">Enviar</C.Button>
+        <C.Button onClick={handleUpdate} type="submit">Adicionar</C.Button>
       </form>
     </C.FormContainer>
   );
