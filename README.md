@@ -55,11 +55,13 @@ Instale o json-serve:
 npm install json-server ts-node typescript --save-dev
 ```
 
-Entre na pasta src e rode o comando:
+Entre no arquivo src e rode o comando:
 ```bash
 npx json-server --watch contatos.json --port 3001
 ```
 Observação: Deixe um terminal rodando somente esse json-serve.
+Observação: Deixe a porta do json-serve rodando na 3001, pois se não dá erro
+na hora de fazer requisição.
 
 Na pasta raiz, rode o projeto react com o seguinte comando:
 ```bash
