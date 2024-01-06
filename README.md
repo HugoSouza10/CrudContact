@@ -49,4 +49,24 @@ Remova a pasta package-lock.json e rode o comando abaixo.
 
 ```bash
 npm install
+```
+
+Instale o json-serve:
+```bash
+npm install json-server ts-node typescript --save-dev
+```
+
+Entre na pasta src e rode o comando:
+```bash
+npx json-server --watch contatos.json --port 3000
+```
+Observação: Deixe um terminal rodando somente esse json-serve.
+
+Na pasta raiz, rode o projeto react com o seguinte comando:
+```bash
+  npm run start
+```
+
+
+
 
