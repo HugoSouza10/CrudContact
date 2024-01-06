@@ -1,8 +1,7 @@
-<p align="center">
-  <img src="./logo.png" alt="Awesome Project Logo" width="300">
-</p>
+![image](https://github.com/HugoSouza10/CrudContact/assets/51915862/32e98dcc-375a-4edd-857c-2cc56ba5d423)
 
-<h1 align="center">Awesome Project</h1>
+
+<h1 align="center">CRUD CONTACT</h1>
 
 <p align="center">
   <strong>Uma descrição incrível do seu projeto.</strong>
