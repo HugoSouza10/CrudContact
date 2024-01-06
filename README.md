@@ -58,7 +58,7 @@ npm install json-server ts-node typescript --save-dev
 
 Entre na pasta src e rode o comando:
 ```bash
-npx json-server --watch contatos.json --port 3000
+npx json-server --watch contatos.json --port 3001
 ```
 Observação: Deixe um terminal rodando somente esse json-serve.
 
