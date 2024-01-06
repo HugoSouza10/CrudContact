@@ -45,5 +45,8 @@ Descrição detalhada do projeto, sua finalidade e principais características. 
 
 Instruções detalhadas sobre como instalar o projeto. Certifique-se de incluir todos os pré-requisitos e etapas necessárias para configurar o ambiente.
 
+Remova a pasta package-lock.json e rode o comando abaixo.
+
 ```bash
 npm install
+
