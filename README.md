@@ -21,14 +21,14 @@ Este projeto é uma aplicação CRUD (Create, Read, Update, Delete) simples, por
 
 ## Início Rápido
 
-1. Clone o repositório: ``bash git clone https://github.com/seu-nome/seu-repo.git`
-2. Instale as dependências: `bash npm install`
+1. Clone o repositório:  ```bash `git clone https://github.com/seu-nome/seu-repo.git`
+2. Instale as dependências:  ```bash `npm install`
 3. Inicie o JSON-Server: 
 - **Observação:** Primeiro, entre na pasta src e execute o comando abaixo. Deixe o json-server
 executando em um terminal separado.
    ```bash
    npx json-server --watch contatos.json --port 3001
-5. Inicie a aplicação React: `bash npm start`
+5. Inicie a aplicação React:  ```bash `bash npm start`
 6. Abra seu navegador e acesse `http://localhost:3000`
 
 ## Uso
