@@ -21,7 +21,7 @@ Este projeto é uma aplicação CRUD (Create, Read, Update, Delete) simples, por
 
 ## Início Rápido
 
-1. Clone o repositório: `git clone https://github.com/seu-nome/seu-repo.git`
+1. Clone o repositório: `git clone [https://github.com/seu-nome/seu-repo.git](https://github.com/HugoSouza10/CrudContact)`
 2. Instale as dependências:  `npm install`
 3. Inicie o JSON-Server: 
 - **Observação:** Primeiro, entre na pasta src e execute o comando abaixo. Deixe o json-server
