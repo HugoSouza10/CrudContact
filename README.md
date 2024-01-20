@@ -1,4 +1,4 @@
-# React + TypeScript CRUD App with JSON-Server
+# Aplicação CRUD com React + TypeScript e JSON-Server
 
 ![image](https://github.com/HugoSouza10/CrudContact/assets/51915862/32e98dcc-375a-4edd-857c-2cc56ba5d423)
 
