@@ -1,12 +1,12 @@
 import { Router } from 'express';
 
-import * as TodoController from '../controllers/todo.controller';
+import * as contatosController from '../controllers/contatos.controller';
 
 const router = Router();
 
-router.get('/todo', TodoController.all);
-router.post('/todo', TodoController.add);
-router.put('/todo/:id', TodoController.update);
-router.delete('/todo/:id', TodoController.remove);
+router.get('/contatos', contatosController.all);
+router.post('/contatos', contatosController.add);
+router.put('/contatos/:id', contatosController.update);
+router.delete('/contatos/:id', contatosController.remove);
 
 export default router;
