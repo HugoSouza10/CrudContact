@@ -12,8 +12,6 @@ export const Home = () => {
     const [termoBusca, settermoBusca] = useState<String>(String);
 
     const captureWord = (word:string) => {
-      // Lógica da função aqui
-      console.log(word);
       settermoBusca(word)
     };
 
@@ -30,7 +28,8 @@ export const Home = () => {
     useEffect(() => {
         const fetchContacts = async () => {
           try {
-            setContacts ( await api.listar());
+            let {contatos} = await api.listar();
+            setContacts (contatos);
           } catch (error) {
             console.log('Erro ao buscar contatos:', error);
           }

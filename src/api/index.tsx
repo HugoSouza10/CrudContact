@@ -21,9 +21,12 @@ export const api =  {
     adicionar: async (data:Props) => {
       try {
         const response = await axios.post('http://localhost:3001/contatos', {
-          nome: data.nome,
-          email: data.email,
-          telefone: data.telefone
+          contatos: {
+            nome: data.nome,
+            email: data.email,
+            telefone: data.telefone
+          }
+         
         });
         return response.data;
       } catch (error) {
