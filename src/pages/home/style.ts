@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
-export const Container = styled.div `
+export const Container = styled.div`
    font-family: Arial, Helvetica, sans-serif;
    margin: auto;
    max-width: 1024px;
    padding-top: 20px;
+   padding: 10px;
 `;
 
 export const ContainerNew = styled.div`
@@ -17,7 +18,6 @@ export const ContainerNew = styled.div`
     }
 
     .btn-new {
-        
         padding: 5px;
         background-color: #0767c6;
         color: #fff;
@@ -25,14 +25,25 @@ export const ContainerNew = styled.div`
     }
 
     .btn-icone {
-       margin-right: 3px;
+        margin-right: 3px;
     }
 `;
 
-export const ContainerCard = styled.div `
+export const ContainerCard = styled.div`
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     margin-top: 20px;
 
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;  // Switch to a single column layout for screens smaller than 768px
+    }
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;  // Further adjust for smaller screens, if needed
+        gap: 10px;  // Adjust gap for smaller screens
+    }
+
+    max-width: 100%;  // Set a maximum width for the table
+    overflow-x: auto;  // Add horizontal scroll for small screens
 `;

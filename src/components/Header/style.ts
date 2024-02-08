@@ -6,6 +6,7 @@ export const Header = styled.header`
   padding: 20px 0;
   color: #fff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
 `;
 
 export const Container = styled.div`
@@ -16,6 +17,7 @@ export const Container = styled.div`
 export const Brand = styled.div`
   display: flex;
   align-items: center;
+
 
   .icon-brand {
     font-size: 40px;
