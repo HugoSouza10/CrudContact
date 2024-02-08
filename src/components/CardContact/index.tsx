@@ -50,7 +50,7 @@ export const CardContact = ({ id, nome, email, telefone }:ContactType) => {
                 </tr>
             </table>
             <C.ContainerAction>
-                <C.ButtonAction onClick={() => handleOpenModal("ver")} bg = "#FFC107">
+                <C.ButtonAction onClick={() => handleOpenModal("ver")} bg = "#2d2d2d">
                   Ver
                 </C.ButtonAction>
                 <C.ButtonAction onClick={() => handleOpenModal("edit")} bg = "#0767c6">
@@ -59,7 +59,7 @@ export const CardContact = ({ id, nome, email, telefone }:ContactType) => {
                 <C.ButtonAction onClick={handleDelete} bg = "#ff0057">
                   Delete
                 </C.ButtonAction>
-                <C.ButtonAction onClick={()=>handleOpenModal("add")} bg = "#FFC107">
+                <C.ButtonAction onClick={()=>handleOpenModal("add")} bg = "#2d2d2d">
                   Add
                 </C.ButtonAction>
             </C.ContainerAction>

@@ -18,7 +18,7 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  background-color: #0767c6;
+  background-color: #2d2d2d;
   color: white;
   padding: 10px 20px;
   border: none;

@@ -29,16 +29,16 @@ export const Container = styled.div`
         }
 
         tr:first-child {
-            color: #000;
-            background-color: #e7e7e7;
+            color: #fff;
+            background-color: #2d2d2d;
         }
 
         tr:hover {
-            background-color: #e7e7e7;
+            background-color: #2d2d2d;
+            color: #fff;
         }
 
 `;
-
 
 export const Avatar = styled.div`
     border-radius: 100%;

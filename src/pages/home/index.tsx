@@ -42,8 +42,8 @@ export const Home = () => {
         <>
             <Header/>
             <C.Container>
-                <h1>Phone Directory</h1>
-                <p>jnsnsjdjnsjdnsjndjnsdjnsjndsd bfbhdbfdbfdb sjnssndn ksnknskd</p>
+                <h1>Lista de contatos:</h1>
+                <p>Contatos organizados, conexões simplificadas. Sua rede, seu controle.</p>
                 <Search captureWord={captureWord}/>
                 <C.ContainerCard>
                     {termoBusca

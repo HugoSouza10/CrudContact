@@ -25,6 +25,7 @@ export const HeaderModal  = styled.header`
 
 `;
 
+
 /*estilização modal */
 
 export const ModalOverlay = styled.div<{ isOpen: boolean }>`
@@ -44,4 +45,10 @@ export  const ModalContent = styled.div`
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
+
+  .btnClose {
+    background-color: #2d2d2d;
+    padding:10px;
+    color:#fff;
+  }
 `;
