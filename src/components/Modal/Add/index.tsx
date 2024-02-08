@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import { api } from '../../../api';
 import * as C from './style';
+import { ContactType } from '../../../types';
 
 
 export const Add = () => {
-  const [formData, setFormData] = useState({
-    nome: '',
-    email: '',
-    telefone: '',
-  });
+  const [formData, setFormData] = useState<ContactType>(Object);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -20,15 +17,14 @@ export const Add = () => {
     });
   };
 
-
-  const handleUpdate = () => {
+  const handleAdd =  () => {
     api.adicionar(formData);
   }
 
   return (
     <C.FormContainer>
       <h2>Adicionar usuário</h2>
-      <form>
+      <form onSubmit={handleAdd}>
         <C.Input
           type="text"
           placeholder="Nome"
@@ -50,7 +46,7 @@ export const Add = () => {
           onChange={handleChange}
           value={formData.telefone}
         />
-        <C.Button onClick={handleUpdate} type="submit">Adicionar</C.Button>
+        <C.Button type="submit">Adicionar</C.Button>
       </form>
     </C.FormContainer>
   );

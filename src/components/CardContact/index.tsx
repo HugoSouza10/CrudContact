@@ -2,7 +2,7 @@
 import * as C from './style';
 import { ContactType } from '../../types';
 import { api } from '../../api';
-import { useState } from 'react';
+import {useState } from 'react';
 import React from 'react';
 import Modal from '../Modal';
 import {Ver} from '../Modal/Ver';
@@ -23,11 +23,11 @@ export const CardContact = ({ id, nome, email, telefone }:ContactType) => {
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
-
-
+  
     const handleDelete = () => {
        api.delete(id);
        alert('Opa, deletando usuário'+id);
+       window.location.reload(); // Recarrega a página após deletar
     }
 
     return (

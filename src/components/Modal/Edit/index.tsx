@@ -27,11 +27,10 @@ export const Edit = ({id, nome, email, telefone}:ContactType) => {
     api.editar(FormData);
   }
 
-
   return (
     <C.FormContainer>
       <h2>Editar informação</h2>
-      <form>
+      <form onSubmit={handleUpdate}>
         <C.Input
           type="text"
           placeholder="Nome"
@@ -53,7 +52,7 @@ export const Edit = ({id, nome, email, telefone}:ContactType) => {
           value={FormData.telefone}
           onChange={handleChange}
         />
-        <C.Button onClick={handleUpdate} type="submit">Enviar</C.Button>
+        <C.Button type="submit">Enviar</C.Button>
       </form>
     </C.FormContainer>
   );

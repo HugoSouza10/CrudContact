@@ -27,7 +27,7 @@ export const UsuariosContatos = sequelize.define<ContatosInstance>('UsuariosCont
 
     telefone: {
         type: DataTypes.STRING
-    }
+    },
 }, {
     tableName: 'contatos',
     timestamps: false
