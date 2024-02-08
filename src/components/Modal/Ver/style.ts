@@ -12,7 +12,7 @@ export const InfoContainer = styled.div`
 
   img {
     width: 100%;
-    height:auto;
+    height:200px;
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
