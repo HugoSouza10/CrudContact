@@ -10,9 +10,33 @@ export const Header = styled.header`
 `;
 
 export const Container = styled.div`
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
   margin: auto;
   max-width: 1024px;
+
+  .ContainerLogin {
+    .userLogin {
+      margin-right:10px;
+    }
+
+    .buttonLogout {
+      background: #ffcc00;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      padding: 5px;
+      cursor:pointer;
+
+      &:hover {
+        background: #ff0057;
+        color:#fff;
+      }
+    }
+  }
 `;
+
 
 export const Brand = styled.div`
   display: flex;

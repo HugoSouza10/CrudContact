@@ -7,7 +7,6 @@ import React, { useEffect, useState } from 'react';
 import { ContactType } from '../../types';
 
 export const Home = () => {
-
     const [contacts, setContacts] = useState<ContactType[]>([]);
     const [termoBusca, settermoBusca] = useState<String>(String);
 
@@ -18,7 +17,6 @@ export const Home = () => {
     
 
       // Função para filtrar os contatos por nome, email e id
-
       const contatosFiltrados = contacts.filter(contato => {
         return (
           contato.nome.toLowerCase().includes(termoBusca.toLowerCase()) ||

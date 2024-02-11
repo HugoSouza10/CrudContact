@@ -4,5 +4,6 @@ export type ContactType = {
     email: string;
     telefone: string;
     foto?: string;
+    password?: string;
 };
   

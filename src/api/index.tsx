@@ -45,5 +45,35 @@ export const api =  {
         } catch (error) {
           console.log('Erro ao editar contato:', error);
         }
+    },
+
+    //ENDPOIN RELACIONADOS A LOGIN, AQUI VAMOS RETORNAR UM DADO FAKE POR ENQUANTO
+
+    validateToken: async (token: string) => {
+      return {
+          contatos: { id: 3, nome: 'José', email: 'jose@gmail.com', telefone: '88992301470' }
+      };
+      /*
+      const response = await api.post('/validate', { token });
+      return response.data;
+      */
+    },
+
+    signin: async (email: string, password: string) => {
+      return {
+          contatos: { id: 3, nome: 'José', email: 'jose@gmail.com', telefone: '88992301470' },
+          token: '123456789'
+      };
+
+        /* Essa resposta precisa vir com um usuario e um token do backend!
+        const response = await api.post('/signin', { email, password });
+        return response.data;
+        */
+    },
+
+    logout: async () => {
+      return { status: true };
+      //const response = await api.post('/logout');
+     // return response.data;
     }
 }
