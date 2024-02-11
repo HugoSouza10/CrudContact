@@ -36,18 +36,20 @@ export const CardContact = ({ id, nome, email, telefone }:ContactType) => {
                 <img src="https://source.unsplash.com/random" alt="" />
             </C.Avatar>
             <table border={0}>
-                <tr>
-                    <td>Nome:</td>
-                    <td>{nome}</td>
-                </tr>
-                <tr>
-                    <td>Mobile:</td>
-                    <td>{telefone}</td>
-                </tr>
-                <tr>
-                    <td>E-mail:</td>
-                    <td>{email}</td>
-                </tr>
+              <tbody>
+                  <tr>
+                      <td>Nome:</td>
+                      <td>{nome}</td>
+                  </tr>
+                  <tr>
+                      <td>Mobile:</td>
+                      <td>{telefone}</td>
+                  </tr>
+                  <tr>
+                      <td>E-mail:</td>
+                      <td>{email}</td>
+                  </tr>
+                </tbody>
             </table>
             <C.ContainerAction>
                 <C.ButtonAction onClick={() => handleOpenModal("ver")} bg = "#2d2d2d">

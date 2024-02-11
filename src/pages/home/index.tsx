@@ -11,11 +11,14 @@ export const Home = () => {
     const [contacts, setContacts] = useState<ContactType[]>([]);
     const [termoBusca, settermoBusca] = useState<String>(String);
 
-    const captureWord = (word:string) => {
-      settermoBusca(word)
+    const captureWord = (word: string) => {
+      // Verifique se o termo de busca mudou antes de atualizar o estado
+      word?settermoBusca(word) : settermoBusca('');
     };
+    
 
       // Função para filtrar os contatos por nome, email e id
+
       const contatosFiltrados = contacts.filter(contato => {
         return (
           contato.nome.toLowerCase().includes(termoBusca.toLowerCase()) ||
